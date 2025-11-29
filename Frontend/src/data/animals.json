@@ -1,0 +1,154 @@
+{
+  "Forest": [
+    {
+      "id": "tiger",
+      "name": "Bengal Tiger",
+      "scientific": "Panthera tigris tigris",
+      "description": "The Bengal tiger is a majestic big cat native to the Indian subcontinent. Known for their distinctive orange coat with black stripes, these apex predators are powerful swimmers and excellent hunters.",
+      "diet": "Carnivore - primarily deer, wild boar, and water buffalo",
+      "habitat": "Tropical rainforests, grasslands, and mangrove swamps",
+      "status": "Endangered",
+      "lifespan": "8-10 years in wild, up to 20 years in captivity",
+      "funFact": "Tigers are the largest cat species and can leap up to 5 meters high!",
+      "videoUrl": "https://youtu.be/25S6eP7s5cY?si=7EYPOkciNS6HdBJr"
+    },
+    {
+      "id": "elephant",
+      "name": "Asian Elephant",
+      "scientific": "Elephas maximus",
+      "description": "Asian elephants are intelligent, social animals with remarkable memory and emotional depth. They play a crucial role in their ecosystem by creating water holes and dispersing seeds.",
+      "diet": "Herbivore - grasses, bark, roots, and fruits",
+      "habitat": "Tropical forests and grasslands",
+      "status": "Endangered",
+      "lifespan": "60-70 years",
+      "funFact": "Elephants can recognize themselves in a mirror, showing self-awareness!",
+      "videoUrl": "/videos/elephant-hologram.mp4"
+    },
+    {
+      "id": "redpanda",
+      "name": "Red Panda",
+      "scientific": "Ailurus fulgens",
+      "description": "Red pandas are adorable tree-dwelling mammals with reddish-brown fur and a long, bushy tail. Despite their name, they're not closely related to giant pandas.",
+      "diet": "Herbivore - primarily bamboo, also fruits and insects",
+      "habitat": "Temperate forests in the Himalayas",
+      "status": "Endangered",
+      "lifespan": "8-10 years in wild",
+      "funFact": "Red pandas spend most of their time in trees and use their tail as a blanket!",
+      "videoUrl": "/videos/redpanda-hologram.mp4"
+    }
+  ],
+  "Ocean": [
+    {
+      "id": "dolphin",
+      "name": "Bottlenose Dolphin",
+      "scientific": "Tursiops truncatus",
+      "description": "Bottlenose dolphins are highly intelligent marine mammals known for their playful behavior and complex social structures. They use echolocation to navigate and hunt.",
+      "diet": "Carnivore - fish, squid, and crustaceans",
+      "habitat": "Warm and temperate oceans worldwide",
+      "status": "Least Concern",
+      "lifespan": "40-50 years",
+      "funFact": "Dolphins have unique whistles that act like names to identify each other!",
+      "videoUrl": "/videos/dolphin-hologram.mp4"
+    },
+    {
+      "id": "seaturtle",
+      "name": "Green Sea Turtle",
+      "scientific": "Chelonia mydas",
+      "description": "Green sea turtles are large marine reptiles that migrate thousands of miles between feeding grounds and nesting beaches. They play a vital role in maintaining healthy seagrass beds.",
+      "diet": "Herbivore - seagrasses and algae (adults)",
+      "habitat": "Tropical and subtropical oceans",
+      "status": "Endangered",
+      "lifespan": "80+ years",
+      "funFact": "Sea turtles can hold their breath for up to 5 hours underwater!",
+      "videoUrl": "/videos/seaturtle-hologram.mp4"
+    },
+    {
+      "id": "shark",
+      "name": "Great White Shark",
+      "scientific": "Carcharodon carcharias",
+      "description": "Great white sharks are apex predators with powerful jaws and keen senses. They're crucial for maintaining balance in marine ecosystems.",
+      "diet": "Carnivore - seals, sea lions, fish, and dolphins",
+      "habitat": "Coastal and offshore waters",
+      "status": "Vulnerable",
+      "lifespan": "70+ years",
+      "funFact": "Great whites can detect a single drop of blood in 100 liters of water!",
+      "videoUrl": "/videos/shark-hologram.mp4"
+    }
+  ],
+  "Desert": [
+    {
+      "id": "camel",
+      "name": "Dromedary Camel",
+      "scientific": "Camelus dromedarius",
+      "description": "Dromedary camels are remarkably adapted to desert life with their single hump storing fat for energy. They can survive extreme temperatures and go weeks without water.",
+      "diet": "Herbivore - thorny plants, dry grasses, and saltbush",
+      "habitat": "Arid deserts and semi-deserts",
+      "status": "Domesticated (wild populations extinct)",
+      "lifespan": "40-50 years",
+      "funFact": "Camels can drink 40 gallons of water in one go and store it in their bloodstream!",
+      "videoUrl": "/videos/camel-hologram.mp4"
+    },
+    {
+      "id": "fennecfox",
+      "name": "Fennec Fox",
+      "scientific": "Vulpes zerda",
+      "description": "Fennec foxes are the smallest fox species, famous for their enormous ears that help dissipate heat and detect prey underground. They're perfectly adapted to desert life.",
+      "diet": "Omnivore - insects, small mammals, birds, and plants",
+      "habitat": "Sahara Desert and Arabian Peninsula",
+      "status": "Least Concern",
+      "lifespan": "10-14 years",
+      "funFact": "Their huge ears can be half as long as their body and help them stay cool!",
+      "videoUrl": "/videos/fennecfox-hologram.mp4"
+    },
+    {
+      "id": "meerkat",
+      "name": "Meerkat",
+      "scientific": "Suricata suricatta",
+      "description": "Meerkats are highly social mongooses that live in complex underground burrow systems. They take turns standing guard while others forage, displaying remarkable cooperation.",
+      "diet": "Omnivore - insects, lizards, birds, and roots",
+      "habitat": "Kalahari Desert and surrounding areas",
+      "status": "Least Concern",
+      "lifespan": "12-14 years",
+      "funFact": "Meerkats are immune to certain snake venoms and teach their young how to hunt!",
+      "videoUrl": "/videos/meerkat-hologram.mp4"
+    }
+  ],
+  "Arctic": [
+    {
+      "id": "polarbear",
+      "name": "Polar Bear",
+      "scientific": "Ursus maritimus",
+      "description": "Polar bears are the largest land carnivores, perfectly adapted to Arctic life with thick fur and a layer of blubber. They're excellent swimmers and primarily hunt seals on sea ice.",
+      "diet": "Carnivore - primarily ringed and bearded seals",
+      "habitat": "Arctic sea ice and coastal areas",
+      "status": "Vulnerable",
+      "lifespan": "25-30 years in wild",
+      "funFact": "Polar bear fur isn't actually white - it's transparent and hollow to trap heat!",
+      "videoUrl": "/videos/polarbear-hologram.mp4"
+    },
+    {
+      "id": "arcticfox",
+      "name": "Arctic Fox",
+      "scientific": "Vulpes lagopus",
+      "description": "Arctic foxes have incredibly thick fur that changes color with seasons - white in winter, brown/gray in summer. They can survive temperatures as low as -70°C.",
+      "diet": "Omnivore - lemmings, birds, fish, and berries",
+      "habitat": "Arctic tundra and ice floes",
+      "status": "Least Concern",
+      "lifespan": "3-6 years in wild",
+      "funFact": "Arctic foxes have fur on their paw pads to keep them warm on ice!",
+      "videoUrl": "/videos/arcticfox-hologram.mp4"
+    },
+    {
+      "id": "penguin",
+      "name": "Emperor Penguin",
+      "scientific": "Aptenodytes forsteri",
+      "description": "Emperor penguins are the tallest and heaviest penguin species. Males endure harsh Antarctic winters, fasting for months while incubating eggs on their feet.",
+      "diet": "Carnivore - fish, squid, and krill",
+      "habitat": "Antarctic ice and surrounding waters",
+      "status": "Near Threatened",
+      "lifespan": "15-20 years",
+      "funFact": "Emperor penguins can dive to depths of 500 meters and hold their breath for 20 minutes!",
+      "videoUrl": "/videos/penguin-hologram.mp4"
+    }
+  ]
+}

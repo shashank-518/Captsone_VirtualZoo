@@ -1,0 +1,110 @@
+{
+  "Forest": [
+    {
+      "question": "What is the primary diet of a Bengal Tiger?",
+      "options": ["Plants and leaves", "Deer and wild boar", "Fish and insects", "Fruits and berries"],
+      "answer": 1
+    },
+    {
+      "question": "What conservation status is the Asian Elephant?",
+      "options": ["Least Concern", "Vulnerable", "Endangered", "Extinct"],
+      "answer": 2
+    },
+    {
+      "question": "What do Red Pandas primarily eat?",
+      "options": ["Meat", "Fish", "Bamboo", "Insects"],
+      "answer": 2
+    },
+    {
+      "question": "How high can tigers leap?",
+      "options": ["2 meters", "3 meters", "5 meters", "10 meters"],
+      "answer": 2
+    },
+    {
+      "question": "What special ability shows elephants' intelligence?",
+      "options": ["Can recognize themselves in mirrors", "Can fly", "Can change color", "Can breathe underwater"],
+      "answer": 0
+    }
+  ],
+  "Ocean": [
+    {
+      "question": "How do dolphins identify each other?",
+      "options": ["By color", "By unique whistles", "By smell", "By size"],
+      "answer": 1
+    },
+    {
+      "question": "What is the conservation status of Green Sea Turtles?",
+      "options": ["Extinct", "Least Concern", "Endangered", "Critically Endangered"],
+      "answer": 2
+    },
+    {
+      "question": "How long can sea turtles hold their breath?",
+      "options": ["30 minutes", "1 hour", "Up to 5 hours", "10 hours"],
+      "answer": 2
+    },
+    {
+      "question": "What do adult Green Sea Turtles primarily eat?",
+      "options": ["Fish", "Seagrasses and algae", "Coral", "Jellyfish"],
+      "answer": 1
+    },
+    {
+      "question": "What special sense helps Great White Sharks hunt?",
+      "options": ["X-ray vision", "Telepathy", "Can detect single drops of blood", "Night vision"],
+      "answer": 2
+    }
+  ],
+  "Desert": [
+    {
+      "question": "How much water can a camel drink at once?",
+      "options": ["5 gallons", "10 gallons", "20 gallons", "40 gallons"],
+      "answer": 3
+    },
+    {
+      "question": "Why do Fennec Foxes have such large ears?",
+      "options": ["To fly", "To dissipate heat", "To store water", "To dig burrows"],
+      "answer": 1
+    },
+    {
+      "question": "What is special about meerkats' social behavior?",
+      "options": ["They live alone", "They take turns standing guard", "They never sleep", "They can't communicate"],
+      "answer": 1
+    },
+    {
+      "question": "Where does a camel store fat for energy?",
+      "options": ["In their legs", "In their hump", "In their tail", "In their ears"],
+      "answer": 1
+    },
+    {
+      "question": "What is unique about Fennec Fox ears?",
+      "options": ["Can hear underwater", "Can be half as long as their body", "Change color", "Glow in the dark"],
+      "answer": 1
+    }
+  ],
+  "Arctic": [
+    {
+      "question": "What color is polar bear fur actually?",
+      "options": ["White", "Yellow", "Transparent and hollow", "Blue"],
+      "answer": 2
+    },
+    {
+      "question": "What special feature do Arctic Foxes have on their paws?",
+      "options": ["Webbed feet", "Fur on paw pads", "Extra toes", "Claws that retract"],
+      "answer": 1
+    },
+    {
+      "question": "How deep can Emperor Penguins dive?",
+      "options": ["50 meters", "100 meters", "500 meters", "1000 meters"],
+      "answer": 2
+    },
+    {
+      "question": "What is the coldest temperature Arctic Foxes can survive?",
+      "options": ["-20°C", "-40°C", "-70°C", "-100°C"],
+      "answer": 2
+    },
+    {
+      "question": "How long can Emperor Penguins hold their breath?",
+      "options": ["5 minutes", "10 minutes", "20 minutes", "30 minutes"],
+      "answer": 2
+    }
+  ]
+}
