@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Maximize2 } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import animalsData from "@/data/animals.json";
 import tigerHologramMp4 from "@/assets/bengal tiger  hologram video.mp4";
 import pandaMp4 from "@/assets/panda.mp4";
+import Hologram3D from "../components/ui/Hologram3D";
 
 type HabitatType = "Forest" | "Ocean" | "Desert" | "Arctic";
 
@@ -13,23 +14,50 @@ const HologramViewer = () => {
   const { habitat, animalId } = useParams<{ habitat: HabitatType; animalId: string }>();
   const videoContainerRef = useRef<HTMLDivElement>(null);
 
+  const [hologramData, setHologramData] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
   const animals = habitat ? animalsData[habitat] : [];
   const animal = animals.find(a => a.id === animalId);
-  // Resolve local asset overrides (e.g., Bengal Tiger has a bundled mp4 in src/assets)
+
+  // Resolve local bundled MP4 overrides
   const resolvedVideoUrl: string | undefined =
-    animal?.id === "tiger" ? (tigerHologramMp4 as unknown as string) : 
+    animal?.id === "tiger" ? (tigerHologramMp4 as unknown as string) :
     animal?.id === "redpanda" ? (pandaMp4 as unknown as string) :
     (animal as any)?.videoUrl;
+
+  // ---- FETCH AI HOLOGRAM IF NEEDED ----
+  useEffect(() => {
+    if (resolvedVideoUrl) return; // video exists → no need for AI
+    if (!animal) return;
+
+    const fetchHologram = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch("http://localhost:5000/api/3d/generate3d", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: `3D hologram of a Bengal Tiger standing and roaring` }),
+        });
+
+        const json = await res.json();
+        setHologramData(json);
+      } catch (err) {
+        console.error("Hologram AI error:", err);
+      }
+      setLoading(false);
+    };
+
+    fetchHologram();
+  }, [animal]);
 
   const handleFullscreen = async () => {
     if (!videoContainerRef.current) return;
 
     try {
       if (!document.fullscreenElement) {
-        // Request fullscreen
         await videoContainerRef.current.requestFullscreen();
       } else {
-        // Exit fullscreen
         await document.exitFullscreen();
       }
     } catch (error) {
@@ -64,8 +92,8 @@ const HologramViewer = () => {
             <h1 className="text-3xl font-bold mb-2">{animal.name} Hologram</h1>
           </div>
 
-          {/* Simple Video Display */}
-          <div 
+          {/* ---------- DISPLAY VIDEO OR 3D HOLOGRAM OR EMOJI ---------- */}
+          <div
             ref={videoContainerRef}
             className="relative w-full aspect-video bg-gray-900 rounded-lg overflow-hidden cursor-pointer group"
             onClick={handleFullscreen}
@@ -79,13 +107,18 @@ const HologramViewer = () => {
                 loop
                 playsInline
               />
+            ) : loading ? (
+              <div className="flex items-center justify-center h-full text-xl">
+                Generating 3D hologram...
+              </div>
+            ) : hologramData?.pointCloud ? (
+              <Hologram3D pointCloud={hologramData.pointCloud} />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-6xl">
                 {getAnimalEmoji(animal.name)}
               </div>
             )}
 
-            {/* Fullscreen Button */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -119,7 +152,7 @@ const HologramViewer = () => {
   );
 };
 
-// Helper function to get animal emoji for visualization
+// Helper function to get animal emoji
 const getAnimalEmoji = (name: string): string => {
   const emojiMap: Record<string, string> = {
     "Bengal Tiger": "🐅",

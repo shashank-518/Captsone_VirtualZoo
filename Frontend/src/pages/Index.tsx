@@ -3,12 +3,60 @@ import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { Sparkles, Info } from "lucide-react";
 import heroImage from "@/assets/hero-animals.jpg";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from "@/components/ui/dropdown-menu";
 
 const Index = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background">
+
+       <div className="absolute top-4 right-6 z-50 flex items-center gap-3">
+    <span className="text-sm font-semibold text-gray-700">
+      {localStorage.getItem("username")}
+    </span>
+
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center 
+        font-bold text-gray-700 cursor-pointer">
+          {localStorage.getItem("username")?.charAt(0)?.toUpperCase()}
+        </div>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent className="w-40">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+
+        <DropdownMenuItem>
+          Profile
+        </DropdownMenuItem>
+
+        <DropdownMenuSeparator />
+
+        <DropdownMenuItem
+          onClick={() => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("username");
+            window.location.href = "/"; 
+          }}
+          className="text-red-600"
+        >
+          Logout
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  </div>
+
+
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div 
