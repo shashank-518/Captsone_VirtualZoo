@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../components/ui/InputField";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
@@ -67,9 +68,9 @@ export default function Login() {
 
         <p className="text-center mt-4">
           Don’t have an account?{" "}
-          <a href="/signup" className="text-blue-600">
-            Signup
-          </a>
+          <Link to="/signup" className="text-blue-600">
+  Signup
+</Link>
         </p>
       </div>
     </div>
