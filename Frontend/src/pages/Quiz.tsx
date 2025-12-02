@@ -23,7 +23,7 @@ const Quiz = () => {
   useEffect(() => {
     async function fetchQuiz() {
       try {
-        const res = await fetch("http://localhost:5000/api/ai/animal", {
+        const res = await fetch("https://captsone-virtualzoo.onrender.com/api/ai/animal", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ animal: animalId })

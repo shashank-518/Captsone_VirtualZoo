@@ -34,7 +34,7 @@ const HologramViewer = () => {
     const fetchHologram = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/3d/generate3d", {
+        const res = await fetch("https://captsone-virtualzoo.onrender.com/api/3d/generate3d", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ prompt: `3D hologram of a Bengal Tiger standing and roaring` }),
