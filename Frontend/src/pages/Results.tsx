@@ -122,14 +122,7 @@ const Results = () => {
         </Card>
 
         <div className="grid gap-4">
-          <Button 
-            size="lg" 
-            className="w-full bg-gradient-hero"
-            onClick={() => navigate(`/quiz/${result.habitat}`)}
-          >
-            <RotateCcw className="w-5 h-5 mr-2" />
-            Try Again
-          </Button>
+          
           <Button 
             size="lg" 
             variant="outline"
@@ -142,7 +135,7 @@ const Results = () => {
             size="lg" 
             variant="ghost"
             className="w-full"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
           >
             <Home className="w-5 h-5 mr-2" />
             Back to Home

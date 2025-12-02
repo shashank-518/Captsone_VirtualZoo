@@ -68,7 +68,7 @@ const App = () => (
           />
 
           <Route
-            path="/quiz/:habitat"
+            path="/quiz/:habitat/:animalId"
             element={
               <ProtectedRoute>
                 <Quiz />
