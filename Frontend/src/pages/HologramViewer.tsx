@@ -6,6 +6,8 @@ import animalsData from "@/data/animals.json";
 import tigerHologramMp4 from "@/assets/bengal tiger  hologram video.mp4";
 import pandaMp4 from "@/assets/panda.mp4";
 import Hologram3D from "../components/ui/Hologram3D";
+import Dolphin3D from "../assets/Dolphin.mp4"
+import PolarBear3D from "../assets/PolarBear.mp4"
 
 type HabitatType = "Forest" | "Ocean" | "Desert" | "Arctic";
 
@@ -24,6 +26,8 @@ const HologramViewer = () => {
   const resolvedVideoUrl: string | undefined =
     animal?.id === "tiger" ? (tigerHologramMp4 as unknown as string) :
     animal?.id === "redpanda" ? (pandaMp4 as unknown as string) :
+    animal?.id === "dolphin" ? (Dolphin3D as unknown as string) :
+    animal?.id === "polarbear" ? (PolarBear3D as unknown as string) :
     (animal as any)?.videoUrl;
 
   // ---- FETCH AI HOLOGRAM IF NEEDED ----
